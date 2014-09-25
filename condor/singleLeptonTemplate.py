@@ -120,7 +120,7 @@ process.event_selector = cms.PSet(
     JECdown                  = cms.bool(False),
     JERup                    = cms.bool(False),
     JERdown                  = cms.bool(False),
-    JEC_txtfile = cms.string(relBase+'/src/LJMet/Ljmet-singlelepton/JEC/Summer13_V5_DATA_UncertaintySources_AK5PF.txt'),
+    JEC_txtfile = cms.string(relBase+'/src/LJMet/singleLepton/JEC/Summer13_V5_DATA_UncertaintySources_AK5PF.txt'),
     trigger_collection       = cms.InputTag('TriggerResults::HLT'),
     pv_collection            = cms.InputTag('goodOfflinePrimaryVertices'),
     jet_collection           = cms.InputTag('goodPatJetsPFlow'),
@@ -132,14 +132,14 @@ process.event_selector = cms.PSet(
 
     do53xJEC                 = cms.bool(True),
 
-    MCL1JetPar               = cms.string(relBase+'/src/LJMet/Ljmet-singlelepton/JEC/Summer13_V4_MC_L1FastJet_AK5PFchs.txt'),
-    MCL2JetPar               = cms.string(relBase+'/src/LJMet/Ljmet-singlelepton/JEC/Summer13_V4_MC_L2Relative_AK5PFchs.txt'),
-    MCL3JetPar               = cms.string(relBase+'/src/LJMet/Ljmet-singlelepton/JEC/Summer13_V4_MC_L3Absolute_AK5PFchs.txt'),
+    MCL1JetPar               = cms.string(relBase+'/src/LJMet/singleLepton/JEC/Summer13_V4_MC_L1FastJet_AK5PFchs.txt'),
+    MCL2JetPar               = cms.string(relBase+'/src/LJMet/singleLepton/JEC/Summer13_V4_MC_L2Relative_AK5PFchs.txt'),
+    MCL3JetPar               = cms.string(relBase+'/src/LJMet/singleLepton/JEC/Summer13_V4_MC_L3Absolute_AK5PFchs.txt'),
 
-    DataL1JetPar             = cms.string(relBase+'/src/LJMet/Ljmet-singlelepton/JEC/Summer13_V4_DATA_L1FastJet_AK5PFchs.txt'),
-    DataL2JetPar             = cms.string(relBase+'/src/LJMet/Ljmet-singlelepton/JEC/Summer13_V4_DATA_L2Relative_AK5PFchs.txt'),
-    DataL3JetPar             = cms.string(relBase+'/src/LJMet/Ljmet-singlelepton/JEC/Summer13_V4_DATA_L3Absolute_AK5PFchs.txt'),
-    DataResJetPar            = cms.string(relBase+'/src/LJMet/Ljmet-singlelepton/JEC/Summer13_V4_DATA_L2L3Residual_AK5PFchs.txt')
+    DataL1JetPar             = cms.string(relBase+'/src/LJMet/singleLepton/JEC/Summer13_V4_DATA_L1FastJet_AK5PFchs.txt'),
+    DataL2JetPar             = cms.string(relBase+'/src/LJMet/singleLepton/JEC/Summer13_V4_DATA_L2Relative_AK5PFchs.txt'),
+    DataL3JetPar             = cms.string(relBase+'/src/LJMet/singleLepton/JEC/Summer13_V4_DATA_L3Absolute_AK5PFchs.txt'),
+    DataResJetPar            = cms.string(relBase+'/src/LJMet/singleLepton/JEC/Summer13_V4_DATA_L2L3Residual_AK5PFchs.txt')
     )
 
 #######################################################
@@ -157,7 +157,7 @@ process.inputs = cms.PSet (
 
 # JSON
 if not condorIsMC:
-    JsonFile = relBase+'/src/LJMet/Ljmet-singlelepton/json/'+condorJSON
+    JsonFile = relBase+'/src/LJMet/singleLepton/json/'+condorJSON
     myList   = LumiList.LumiList(filename=JsonFile).getCMSSWString().split(',')
     process.inputs.lumisToProcess.extend(myList)
         

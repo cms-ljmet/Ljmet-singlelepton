@@ -28,7 +28,7 @@ files_per_job = 1
 #json='Cert_190456-196531_8TeV_13Jul2012ReReco_Collisions12_JSON_v2.txt'
 #json='Cert_190456-206940_8TeV_PromptReco_Collisions12_JSON.txt'
 #Folder in LJMet where the lists of file names are kepy
-localFileDir='LJMet/Ljmet-singlelepton/fileLists/'
+localFileDir='LJMet/singleLepton/fileLists/'
 
 
 #Configuration options parsed from arguments
@@ -150,7 +150,7 @@ int_file = open(dir+'/'+'interactive.csh','w')
 
 while ( nfiles <= count ):    
     
-    py_templ_file = open(relBase+'/src/LJMet/Ljmet-singlelepton/condor/singleLeptonTemplate.py')
+    py_templ_file = open(relBase+'/src/LJMet/singleLepton/condor/singleLeptonTemplate.py')
     
     py_file = open(dir+'/'+prefix+'_'+str(j)+'.py','w')
 
@@ -180,7 +180,7 @@ os.system('chmod +x '+dir+'/'+'interactive.csh')
 
 njobs = j - 1
 
-jdl_templ_file = open(relBase+'/src/LJMet/Ljmet-singlelepton/condor/singleLeptonTemplate.jdl')
+jdl_templ_file = open(relBase+'/src/LJMet/singleLepton/condor/singleLeptonTemplate.jdl')
 jdl_file       = open(dir+'/'+prefix+'.jdl','w')
 
 

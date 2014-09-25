@@ -12,6 +12,7 @@ then
 python singleLeptonSubmit.py --useMC True --sample TpBW --fileList TprimeToBW_750_Madgraph.txt --submit True --local True
 python singleLeptonSubmit.py --useMC True --sample TpTH --fileList TprimeToTH_750_Madgraph.txt --submit True --local True
 python singleLeptonSubmit.py --useMC True --sample TpTZ --fileList TprimeToTZ_750_Madgraph.txt --submit True --local True
+python singleLeptonSubmit.py --useMC True --sample TpJTH_750 --fileList TprimeJetToTH_750_Madgraph.txt --submit True --local True
 
 fi
 
